@@ -107,3 +107,7 @@ Screenshots are available inside the `screenshots/` directory.
 - Docker Hub image deployment
 - Kubernetes deployment
 - Monitoring using Prometheus & Grafana
+
+- ## 🏗 Architecture
+- <img width="1241" height="1268" alt="image" src="https://github.com/user-attachments/assets/99cde859-73f5-4241-add2-03b0962ce277" />
+
