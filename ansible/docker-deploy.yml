@@ -1,0 +1,26 @@
+---
+- name: Deploy Docker Application
+  hosts: web
+  become: yes
+
+  tasks:
+
+    - name: Create application directory
+      file:
+        path: /home/ec2-user/app
+        state: directory
+
+    - name: Copy application files
+      copy:
+        src: ../app/
+        dest: /home/ec2-user/app/
+
+    - name: Build Docker image
+      command: docker build -t automation-app /home/ec2-user/app
+
+    - name: Remove existing container
+      command: docker rm -f automation
+      ignore_errors: yes
+
+    - name: Run Docker container
+      command: docker run -d --name automation -p 80:80 automation-app
