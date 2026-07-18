@@ -3,3 +3,4 @@
 *.tfstate.*
 terraform.tfvars
 *.pem
+terraform-ansible-docker-automation.txt
